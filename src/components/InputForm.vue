@@ -404,6 +404,7 @@ function handleReset(event) {
   display: flex;
   align-items: center;
   gap: var(--space-300);
+  color: hsl(var(--color-text-input));
 }
 
 .input-radio__label:hover,
