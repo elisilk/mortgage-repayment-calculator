@@ -110,6 +110,8 @@ As always, so many cool :sunglasses: things. Here are some of the key resources 
 Specific areas that the solution should be improved (known issues):
 
 - [ ] Add padding to the "clear all" button link so the hover/clickable area is larger, but taking into account that the flex container may or may not wrap and so the margin fixes could be either at the start or the end depending upon which position it is in. Maybe switch from a wrapping flex container to something more prescriptive (e.g., a container query that uses a two-column grid when there is enough inline space to do so)?
+- [ ] Make additional components, including an input text field component that is reusable, checks validity, and is reactive
+- [ ] Clean up the semantic variables, especially the color variables, so that (in theory) a new color theme would be easy to implement
 - [ ] Figure out why the `@blur` event on the text input field seems to fire more often than what I would have expected, especially after the input has already been deemed invalid (e.g., patternMismatch)
   - [Element: `blur` event](https://developer.mozilla.org/en-US/docs/Web/API/Element/blur_event)
   - [Vue Event Handling](https://vuejs.org/guide/essentials/event-handling)
@@ -130,6 +132,7 @@ Specific areas that the solution should be improved (known issues):
   - [HTML attribute: `pattern`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/pattern)
   - [Regular expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
   - [HTML text input allow only numeric input](https://stackoverflow.com/questions/469357/html-text-input-allow-only-numeric-input)
+- [] Additiona [D-R-Y](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) improvements
 
 More general ideas I want to consider:
 
