@@ -152,7 +152,7 @@ function handleReset(event) {
             class="input-text text-preset3"
             type="text"
             id="mortgage-amount"
-            inputmode="numeric"
+            inputmode="decimal"
             pattern="^\d+(?:,\d{1,3})*(?:\.\d+)?$"
             placeholder=" "
             required
@@ -192,7 +192,7 @@ function handleReset(event) {
               class="input-text text-preset3"
               type="text"
               id="interest-rate"
-              inputmode="numeric"
+              inputmode="decimal"
               pattern="^\d+(?:,\d{1,3})*(?:\.\d+)?$"
               placeholder=" "
               required
