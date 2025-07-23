@@ -1,0 +1,39 @@
+Y = 255 - P * (255 - X) where X is a RGB number, P = opacity (0...1)
+
+INCORRECT
+R = 0 - .25 * (0 - 199) =49.75 
+G = 0 - .25 * (0 - 59) =14.75  
+B = 0 - .25 * (0 - 15) =3.75 
+
+From the color picker:
+952c0a
+hsl(15deg 87% 31%)
+rgb(149 44 10)
+
+
+CORRECT
+
+ColorF = (ColorT * opacityT + ColorB * OpacityB * (1 - OpacityT)) / factor
+
+The factor is defined by this formula OpacityT + OpacityB * (1 - OpacityT)
+
+ColorF is our final color. ColorT/ColorB are respectively the top and bottom colors. opacityT/opacityB are respectively the top and bottom opacities defined for each color:
+
+ColorT
+rgb 255 255 255 / 0.5
+
+ColorB
+rgb 216 219 47 / 1
+
+factor = 0.5 + 1 * (1 - 0.5) = .5 + .5 = 1
+
+ColorF (R) = (255 * 0.5 + 216 * 1 * (1 - 0.5) / 1 =235.5 
+ColorF (G) = (255 * 0.5 + 219 * 1 * (1 - 0.5) / 1 =237  
+ColorF (B) = (255 * 0.5 + 47 * 1 * (1 - 0.5) / 1 =151  
+
+eced97
+hsl(61deg 70% 76%)
+rgb(236 237 151)
+
+
+Is there an easier way to do this with HSL?
