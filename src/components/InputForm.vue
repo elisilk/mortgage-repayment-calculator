@@ -140,7 +140,7 @@ function handleReset(event) {
 <template>
   <form class="input-form" novalidate @submit.prevent="handleSubmit" @reset="handleReset">
     <div class="input-form__header">
-      <h1>Mortgage Calculator</h1>
+      <h1 class="input-form__heading text-preset2">Mortgage Calculator</h1>
       <button type="reset" class="clear-all-button text-preset4">Clear All</button>
     </div>
 
@@ -207,7 +207,7 @@ function handleReset(event) {
 
       <div class="fieldset-radio">
         <p class="text-preset4">Mortgage Type</p>
-        <label for="mortgage-type-repayment" class="input-radio__label text-preset3"
+        <label class="input-radio__label text-preset3"
           ><input
             class="input-radio"
             type="radio"
@@ -219,7 +219,7 @@ function handleReset(event) {
           />
           <span>Repayment</span></label
         >
-        <label for="mortgage-type-interest-only" class="input-radio__label text-preset3"
+        <label class="input-radio__label text-preset3"
           ><input
             class="input-radio"
             type="radio"
@@ -272,6 +272,12 @@ function handleReset(event) {
   width: 100%;
   display: grid;
   gap: var(--space-300);
+}
+
+/* Heading */
+
+.input-form__heading {
+  color: hsl(var(--color-heading-primary));
 }
 
 /* Clear (reset) Button */
